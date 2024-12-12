@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/Images/spoti.jpg" type="image/x-icon">
+    <title>Spotify Clone LogIn</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000301, #050000);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        footer {
+        position: fixed;  
+        bottom: 0;
+        width: 100%;
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: underline;
+    }
+        .logo{
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 150px;
+        height: 150px;
+    }
+        .login-container {
+            width: 470px;
+            padding: 40px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 22px;
+            font-size: 24px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #222;
+            color: #fff;
+        }
+        .login-btn {
+    
+            background-color: #1db954;
+            color: #fff;
+            font-weight: bold;
+        }
+        .login-btn:hover {
+    transform: translateY(-5px); 
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.7); 
+}
+    </style>
+    
+</head>
+<body>
+    <img src="assets/Images/spoti.jpg" alt="Logo" class="logo">
+    <div class="login-container">
+        <h1>Log in to Spotify Clone</h1>
+        <form action="./HomePage.html" method="post">
+            <input type="text" class="input-field" placeholder="Email or username">
+            <input type="password" class="input-field" placeholder="Password">
+            <button type="submit" class="btn login-btn">Log In</button>
+        </form>
+    </div>
+    <footer>
+        <p>Spotify Clone © 2024 | Built by Raizon Kalbo</p>
+    </footer>
+</body>
+</html>

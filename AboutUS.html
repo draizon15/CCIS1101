@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="shortcut icon" href="assets/Images/spoti.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <style>
+          body {
+            margin-top: 100px;
+            background: linear-gradient(135deg, #1DB954, #191414);
+            font-family: Arial, Helvetica, sans-serif
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 20px;
+            background:black;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background:linear-gradient(135deg, #1DB954, #191414);
+        color: #fff;
+        text-align: center;
+        padding: 2px;
+        text-decoration: underline;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+        border-top: none;
+    }
+       .logo{
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 110px;
+        height: 110px;
+        box-shadow: 0 0 20px #000000;
+        transition: transform 0.3s ease;
+       }
+       .logo:hover{
+        transform: scale(1.1);
+       }
+   h1{
+       font-size: 36px;
+       color: #fff;
+       text-shadow: 0 2px 4px #0f9625;
+       text-align: center;
+       margin-top: 10px;
+       font-family: Helvetica, Arial,sans-serif;
+       text-decoration: underline;
+     }
+        .team-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .team-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .team-member {
+            background: #000000;
+            color: #4af36f;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3 ease;
+        }
+        .team-member:hover {
+    transform: translateY(-5px); 
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.7); 
+}
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #000000;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        }
+
+        .team-member h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #f3f7f5;
+        }
+
+        .team-member p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            color: #03c03c;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #2e8b57;
+            margin: 0 5px;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #000000;
+        }
+
+        .social-icons a:hover {
+            background-color: #000000;
+            color: #4af36f;
+        }
+      
+
+    </style>
+    
+</head>
+<body>
+   <nav class="navbar">
+    <a href="./HomePage.html" style="align-self:normal;"><img src="assets/Images/spoti.jpg" alt="Logo" class="logo"></a>
+   </nav>
+    <div class="team-section">
+        <p style="color: #191414;">Welcome to Spotify Clone! We are from BSIS-109  enthusiastic students embarking on our journey to explore the world of web development. This site marks a significant milestone in our learning process as we apply the skills and knowledge we've gained in our course. Our goal is to showcase our creativity, teamwork, and technical abilities while creating a user-friendly experience for visitors. Thank you for supporting our learning journey, and we hope you enjoy exploring what we've built!</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="assets/Images/ivan.jpg" alt="CHRIS IVAN">
+                <h2>Chris Ivan Dioquino</h2>
+                <p>Leader</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/chrisivandioquinope?_rdc=1&_rdr#">Facebook</a>
+                    <a href="https://www.instagram.com/trxvisk?igsh=MWd4bzdoZHRxYTVweA==">Instagram</a>
+                  
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/Images/kelley.jpg" alt="KELLEY MARQUEZ">
+                <h2>Kelley Marquez</h2>
+                <p>Creative designer</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/Klymarquez?_rdc=1&_rdr">Facebook</a>
+                    <a href="https://www.instagram.com/kly_yehl?igsh=Ynk1N2I0N3YzbTN4">Instagram</a>
+                    
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/Images/jho.jpg" alt="JHORENZ YALUNG">
+                <h2>Jhorenz Yalung</h2>
+                <p>Researcher</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=100081663512483&_rdc=1&_rdr">Facebook</a>
+                    <a href="https://www.instagram.com/superrenzx?igsh=MXQ3dzQ5N3poZmZicw==">Instagram</a>
+                    
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/Images/rai.jpg" alt="Raizon Justine">
+                <h2>Raizon Dela Cruz</h2>
+                <p>Kalbo Lang</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/sleepyriceu?_rdc=1&_rdr#">Facebook</a>
+                    <a href="https://www.instagram.com/uncle.ra1?igsh=a2g2b2p4dHJmb2Fl">Instagram</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Spotify Clone © 2024 | Built by Raizon Kalbo</p>
+    </footer>
+</body>
+</html>

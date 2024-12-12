@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/Images/spoti.jpg" type="image/x-icon">
+    <title>Spotify Clone</title>
+<style>
+      body {
+        background: linear-gradient(135deg, #1DB954, #191414);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin: 0%;
+            padding: 0%;
+            align-items: center;
+            justify-content: center;
+            height: 170vh;
+        }
+        footer {
+        bottom: 0;
+        width: 100%;
+        background:linear-gradient(135deg, #1DB954, #191414);
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: underline;
+    }
+        h1,h2{
+        font-weight: 600;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 15px;
+            background:black;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        .navbar a:hover {
+            transform: scale(1.05);
+            transition:0.3s;
+            text-decoration: underline;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            width: 160px;
+            margin-right: 5px;
+        }
+        .navbar .actions {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .actions button {
+            margin-left: 1px;
+            padding: 15px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+        .navbar .actions .logout-btn {
+            background: white;
+            color: black;
+        }
+        .navbar .actions .access-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        .navbar .actions .access-btn:hover {
+            background: white;
+            color: black;
+        }
+        .artist-row {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px; 
+            padding: 20px;
+           
+        }  
+        .artist {
+            width: 300px; 
+            margin-bottom: 20px; 
+            perspective: 1000px; 
+        }
+        .artist img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .artist h2 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .artist p{
+           font-size: medium;
+           font-weight: 300;
+           line-height: 1.6;
+        }
+        .artist-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out; 
+            transform-style: preserve-3d; 
+        } 
+
+       .artist-container:hover {
+          transform: rotateY(10deg);
+          background-color: black; 
+}
+        
+        @media (max-width: 768px) {
+            .artist-row {
+                flex-direction: column; 
+            }
+            .artist {
+                width: 100%;
+            }
+        }
+</style>    
+</head>
+<body>
+     <div class="navbar">
+        <div class="logo">
+            <img src="assets/Images/spoti.jpg" alt="Spotify Logo">
+            <span>Spotify Clone</span>
+        </div>
+        <div class="actions">
+            <a href="./AboutUS.html"><button class="access-btn">About Us</button></a>
+            <a href="./index.html"><button class="logout-btn">Log out</button>
+            </div></a>
+    </div>
+    <div class="artist-row">
+        
+        <div class="artist">
+            <div class="artist-container">
+            <a href="./Menu.html"><img src="assets/Images/hevabi.jpg" alt="A1"></a>
+            <h2>Hev Abi</h2>
+            <p>
+                In the Filipino hip-hop scene, Hev Abi is a rising name. The rapper, who has garnered more than two million monthly listeners on Spotify as of writing, showcases a string of successful releases, including  “Para Sa Streets,” “Lil Kasalanan Shortie,” and “WELCOME2DTQ.” 
+
+He has been featured on the streaming site’s “Bago Sa Rap” playlist cover and their flagship Pinoy Hip-Hop playlist “Kalye Hip-Hop.” He also recently appeared on the KALYE X Manila stage as a special guest last Oct. 28, alongside Gloc-9, Ramdiss, and Hero.
+
+“Kung Alam Mo Lang” (which roughly means “If Only You Know”) is the young artist’s 12-track debut album after his 2022 EP “Sakred Boy.”
+            </p>
+            </div>
+        </div>
+       
+        <div class="artist">
+            <div class="artist-container">
+            <a href="./Menu.html"><img src="assets/Images/ivos.jpg" alt="A2"></a>
+            <h2>IVOS</h2>
+            <p>
+                IV of Spades was a Filipino rock band from Metro Manila, Philippines, consisting of vocalist, bassist and keyboardist Zild Benitez, vocalist and lead guitarist Blaster Silonga, and drummer Badjao de Castro. Unique served as the band's lead vocalist and rhythm guitarist until he left the band in 2018.The band first gained exposure with the release of their 4th single "Mundo".On August 21, 2020, the band entered an indefinite hiatus.
+
+Their musical style has been described as "pop funk" and funk rock by the local press. IV of Spades has been nominated for several musical awards, both in the Philippines and internationally. The band is also known for their 1970s-inspired outfits.
+            </p>
+            </div>
+        </div>
+        <div class="artist">
+            <div class="artist-container">
+            <a href="./Menu.html"><img src="assets/Images/greenday.jpg" alt="A3"></a>
+            <h2>GreenDay</h2>
+            <p>
+                Green Day is an American rock band formed in Rodeo, California, in 1987 by lead vocalist and guitarist Billie Joe Armstrong and bassist and backing vocalist Mike Dirnt, with drummer Tré Cool joining in 1990. In 1994, their major-label debut Dookie, released through Reprise Records, became a breakout success and eventually shipped over 20 million copies in the U.S. Alongside fellow California punk bands Bad Religion, the Offspring, Rancid, NOFX, Pennywise and Social Distortion, Green Day is credited with popularizing mainstream interest in punk rock in the U.S.
+            </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Spotify Clone © 2024 | Built by Raizon Kalbo</p>
+    </footer>
+</body>
+</html>

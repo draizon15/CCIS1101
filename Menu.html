@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/Images/spoti.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #191414);
+            height: 100vh;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;;
+        }
+        .logo{
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 110px;
+        height: 110px;
+        }
+        .logo:hover{
+        transform: scale(1.1);
+       }
+        .music-player {
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: #020000;
+            max-width: 400px;
+        }
+        .album-art {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: 0;
+        }
+        .song-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .artist {
+            font-size: 16px;
+            color: #666;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .controls button {
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .controls button:hover {
+            background-color: #07631b;
+        }
+    </style>
+</head>
+<body>
+    <a href="./HomePage.html" style="align-self:normal;"><img src="assets/Images/spoti.jpg" alt="Logo" class="logo"></a>
+    <div class="music-player">
+        <img id="album-art" src="assets/Images/" alt="Album Art" class="album-art">
+        <div id="song-title" class="song-title">Song Titles</div>
+        <div id="artist" class="artist">Artist</div>
+        <audio id="audio-player">
+            <source id="audio-source" src="music" type="audio/mpeg">
+            
+        </audio>
+        <div class="controls">
+            <button onclick="previousSong()">⏮️</button>
+            <button onclick="playAudio()">▶️</button>
+            <button onclick="pauseAudio()">⏸️</button>
+            <button onclick="nextSong()">⏭️</button>
+        </div>
+    </div>
+
+    <script>
+        const artists = [
+            {
+                name: "Hev Abi",
+                songs: [
+                    { title: "Pakundangan", image: "assets/Images/pakundangan.jpg", audio: "assets/music/hev_abi.mp3" },
+                    { title: "julie pakipot", image: "assets/Images/julie.jpg", audio: "assets/music/Julie Pakipot.mp3" },
+                    { title: "Alam Mo Ba Girl", image: "assets/Images/alammo.jpg", audio: "assets/music/Alam Mo Ba Girl.mp3" },
+                    { title: "Di Na Saluhin", image: "assets/Images/dinasaluhin.jpg", audio: "assets/music/Di Na Saluhin.mp3" },
+                    { title: "Paano Ka Ba?", image: "assets/Images/paano.jpg", audio: "assets/music/Paano Ka Ba.mp3" }
+                ]
+            },
+            {
+                name: "IVOS",
+                songs: [
+                    { title: "Mundo", image: "assets/Images/mundo.png", audio: "assets/music/ivos.mp3" },
+                    { title: "Ilaw Sa Daan", image: "assets/Images/ilaw.png", audio: "assets/music/Ilaw Sa Daan.mp3" },
+                    { title: "Sariling Multo(Sa Panaginip)", image: "assets/Images/sarili.png", audio: "assets/music/Sariling Multo (Sa Panaginip).mp3" },
+                    { title: "Bata, Dahan-Dahan!", image: "assets/Images/bata.png", audio: "assets/music/Bata, Dahan-Dahan!.mp3" },
+                    { title: "Ang Pinagmulan", image: "assets/Images/pinagmulan.png", audio: "assets/music/Ang Pinagmulan.mp3" }
+                ]
+            },
+            {
+                name: "GreenDay",
+                songs: [
+                    { title: "Wake Me Up When September Ends", image: "assets/Images/wmu.png", audio: "assets/music/Wake Me Up When September Ends.mp3" },
+                    { title: "21 Guns", image: "assets/Images/bl.png", audio: "assets/music/greenday.mp3" },
+                    { title: "Last Night On Earth", image: "assets/Images/bl.png", audio: "assets/music/Last Night On Earth.mp3" },
+                    { title: "When I Come Around", image: "assets/Images/wica.jpg", audio: "assets/music/When I Come Around.mp3" },
+                    { title: "Brain Stew", image: "assets/Images/brainstew.png", audio: "assets/music/Brain Stew.mp3" }
+                ]
+            }
+        ];
+
+        let currentArtistIndex = 0;
+        let currentSongIndex = 0;
+
+        // Function to load song details
+        function loadSong(artistIndex, songIndex) {
+            const song = artists[artistIndex].songs[songIndex];
+            document.getElementById("album-art").src = song.image;
+            document.getElementById("song-title").textContent = song.title;
+            document.getElementById("artist").textContent = artists[artistIndex].name;
+            const audioSource = document.getElementById("audio-source");
+            audioSource.src = song.audio;
+            document.getElementById("audio-player").load();
+        }
+
+        // Navigation functions
+        function nextSong() {
+            currentSongIndex++;
+            if (currentSongIndex >= artists[currentArtistIndex].songs.length) {
+                currentSongIndex = 0;
+                currentArtistIndex = (currentArtistIndex + 1) % artists.length; // Loop to the next artist
+            }
+            loadSong(currentArtistIndex, currentSongIndex);
+        }
+
+        function previousSong() {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentArtistIndex = (currentArtistIndex - 1 + artists.length) % artists.length; // Loop to the previous artist
+                currentSongIndex = artists[currentArtistIndex].songs.length - 1;
+            }
+            loadSong(currentArtistIndex, currentSongIndex);
+        }
+
+        function playAudio() {
+            document.getElementById("audio-player").play();
+        }
+
+        function pauseAudio() {
+            document.getElementById("audio-player").pause();
+        }
+
+        // Load the first song initially
+        loadSong(currentArtistIndex, currentSongIndex);
+    </script>
+</body>
+</html>
